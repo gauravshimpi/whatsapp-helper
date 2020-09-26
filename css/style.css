@@ -54,11 +54,23 @@ a{
 }
 
 .fa-facebook{
-    color: #1775F1;
+    color: #3B5998;
 }
 
 .fa-instagram{
     color: #fe4164;
+}
+
+.fa-twitter{
+    color: #00ACEE;
+}
+
+.fa-linkedin{
+    color: #0E76A8;
+}
+
+.fa-chrome{
+    color: #DBE4EB;
 }
 
 .division{

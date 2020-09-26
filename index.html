@@ -15,16 +15,25 @@
     <div class="row w-100 d-flex justify-content-center align-items-center main_div">
         <div class="col-12 col-lg-6 col-md-8 col-xxl-5">
             <div class="card py-3 px-2">
-                <p class="text-center my-3 text-capitalize"><span> WhatsApp Helper!</span></p>
+                <p class="text-center my-3 text-capitalize"><span> Welcome to WhatsApp Helper!</span></p>
                 <div class="row mx-auto">
-                    <div class="col-4">
-                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <div class="col-2">
+                        <a href="https://www.instagram.com/g.a.p.p.u______/" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
-                    <div class="col-4">
-                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <div class="col-2">
+                        <a href="https://www.facebook.com/gaurav.shimpi.007" target="_blank"><i class="fab fa-facebook"></i></a>
                     </div>
-                    <div class="col-4">
-                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <div class="col-2">
+                        <a href="https://twitter.com/ShimpiGaurav1" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="col-2">
+                        <a href="https://www.linkedin.com/in/gauravshimpi007/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="col-2">
+                        <a href="http://gauravshimpi.herokuapp.com/" target="_blank"><i class="fab fa-chrome"></i></a>
+                    </div>
+                    <div class="col-2">
+                        <a href="https://github.com/gauravshimpi/" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
 
@@ -40,7 +49,8 @@
                                    placeholder="910123456789">
                         </div>
                         <div class="my-3">
-                            <button type="button" class="btn btn-block btn-primary btn-lg" id="btnSubmit" onclick="redirect()">
+                            <button type="button" class="btn btn-block btn-primary btn-lg" id="btnSubmit"
+                                    onclick="redirect()">
                                 <small><i class="far fa-user pr-2"></i>Submit</small>
                             </button>
                         </div>
@@ -52,10 +62,30 @@
 </div>
 
 <script>
-    function redirect() {
-        let contact_number = document.getElementById('txtContactNumber');
-        window.location.href = "http://wa.me/"+contact_number;
+    function all_numeric(my_text) {
+        let numbers = /^[0-9]+$/;
+        if (my_text.match(numbers)) {
+            return true;
+        } else {
+            return false;
+        }
     }
+
+    function redirect() {
+        let contact_number = document.getElementById('txtContactNumber').value;
+        if (contact_number.length <= 0) {
+            alert("WhatsApp Number Can't be Empty...")
+        } else if (all_numeric(contact_number)) {
+            if (contact_number.length < 10 || contact_number.length >= 15) {
+                alert("Please Enter Valid WhatsApp Number...");
+            } else {
+                window.location.href = "http://wa.me/" + contact_number;
+            }
+        } else {
+            alert("Please input numeric characters only")
+        }
+    }
+
 </script>
 <script src="js/bootstrap.bundle.js"></script>
 <script src="js/bootstrap.esm.js"></script>
