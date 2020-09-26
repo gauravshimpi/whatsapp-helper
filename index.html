@@ -40,7 +40,7 @@
                                    placeholder="910123456789">
                         </div>
                         <div class="my-3">
-                            <button type="button" class="btn btn-block btn-primary btn-lg">
+                            <button type="button" class="btn btn-block btn-primary btn-lg" id="btnSubmit" onclick="redirect()">
                                 <small><i class="far fa-user pr-2"></i>Submit</small>
                             </button>
                         </div>
@@ -51,6 +51,12 @@
     </div>
 </div>
 
+<script>
+    function redirect() {
+        let contact_number = document.getElementById('txtContactNumber');
+        window.location.href = "http://wa.me/"+contact_number;
+    }
+</script>
 <script src="js/bootstrap.bundle.js"></script>
 <script src="js/bootstrap.esm.js"></script>
 <script src="js/bootstrap.js"></script>
