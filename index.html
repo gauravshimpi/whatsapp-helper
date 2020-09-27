@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link href="media/favicon.ico" rel="icon">
-    <link rel="stylesheet" href="css/bootstrap-grid.css"/>
     <link rel="stylesheet" href="css/bootstrap.css"/>
-    <link rel="stylesheet" href="css/bootstrap-reboot.css"/>
-    <link rel="stylesheet" href="css/bootstrap-utilities.css"/>
     <link rel="stylesheet" href="fontawesome-free-5.14.0-web/css/all.css"/>
     <link rel="stylesheet" href="css/style.css"/>
     <title>Home - WhatsApp Helper</title>
@@ -19,16 +16,19 @@
                 <p class="text-center my-3 text-capitalize"><span> Welcome to WhatsApp Helper!</span></p>
                 <div class="row mx-auto">
                     <div class="col-2">
-                        <a href="https://www.instagram.com/g.a.p.p.u______/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/g.a.p.p.u______/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
                     </div>
                     <div class="col-2">
-                        <a href="https://www.facebook.com/gaurav.shimpi.007" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.facebook.com/gaurav.shimpi.007" target="_blank"><i
+                                class="fab fa-facebook"></i></a>
                     </div>
                     <div class="col-2">
                         <a href="https://twitter.com/ShimpiGaurav1" target="_blank"><i class="fab fa-twitter"></i></a>
                     </div>
                     <div class="col-2">
-                        <a href="https://www.linkedin.com/in/gauravshimpi007/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/gauravshimpi007/" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
                     </div>
                     <div class="col-2">
                         <a href="http://gauravshimpi.herokuapp.com/" target="_blank"><i class="fab fa-chrome"></i></a>
@@ -46,8 +46,9 @@
                     </div>
                     <form class="my-form">
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="txtContactNumber"
-                                   placeholder="910123456789">
+                            <label for="txtContactNumber"></label>
+                            <input class="form-control" id="txtContactNumber" placeholder="910123456789"
+                                   type="text">
                         </div>
                         <div class="my-3">
                             <button type="button" class="btn btn-block btn-primary btn-lg" id="btnSubmit"
@@ -65,11 +66,7 @@
 <script>
     function all_numeric(my_text) {
         let numbers = /^[0-9]+$/;
-        if (my_text.match(numbers)) {
-            return true;
-        } else {
-            return false;
-        }
+        return !!my_text.match(numbers);
     }
 
     function redirect() {
